@@ -1,0 +1,11 @@
+{
+    "explorer.confirmDelete": false,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "code-runner.runInTerminal": true,
+    "editor.fontFamily": "cascadia code",
+    "editor.fontSize": 18,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Cobalt2",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootPath}",
+}

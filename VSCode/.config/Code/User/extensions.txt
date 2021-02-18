@@ -1,0 +1,10 @@
+aaron-bond.better-comments
+alefragnani.Bookmarks
+formulahendry.auto-rename-tag
+formulahendry.code-runner
+ms-python.python
+ms-toolsai.jupyter
+ms-vscode.cpptools
+patbenatar.advanced-new-file
+PKief.material-icon-theme
+wesbos.theme-cobalt2

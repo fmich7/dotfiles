@@ -12,5 +12,5 @@ Gui, Submit  ; Save the input from the user to each control's associated variabl
 MsgBox Lekcja: "%lesson%".
 
 F1::
-Run "C:\Programowanie\dotfiles\Screenshoter lessons\Screenshot-lessons.pyw " %lesson%
+Run "C:\Programowanie\dotfiles\Auto screenshot\Lessons-screenshot.pyw " %lesson%
 Return

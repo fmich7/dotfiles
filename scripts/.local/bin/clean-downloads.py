@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 
 direc = r'C:\Users\{your_name}\Downloads'
