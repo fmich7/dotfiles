@@ -1,0 +1,16 @@
+#OpenSubtitlesDownloader.py Dolphin Fix
+[Desktop Entry]
+Type=Service
+Name=OpenSubtitlesDownload
+GenericName=Automatic subtitles downloader
+Comment=Download synchronized subtitles from opensubtitles.org
+Icon=edit-find-symbolic.svg
+Actions=downloadSubtitles
+Categories=Utility;AudioVideo;Video;
+MimeType=video/avi;video/mpeg;video/mp4;video/ogg;video/quicktime;video/msvideo;video/webm;video/x-matroska;video/x-mpeg;video/x-ms-wmv;video/x-msvideo;video/x-flv;application/ogg;
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,video/*
+
+[Desktop Action downloadSubtitles]
+Name=Download subtitles
+Icon=background
+Exec=OpenSubtitlesDownload.py --gui=kde %F
