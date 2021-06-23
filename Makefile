@@ -1,0 +1,4 @@
+clean:
+	pwd
+all:
+	ls
