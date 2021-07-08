@@ -1,10 +1,11 @@
 " General
 let mapleader = ","
-set number
+set number " shows line number
+set relativenumber " relative line number
 set mouse=a " enables mouse
 set noshowmode " disables mode information [-- INSERT --]
+set clipboard+=unnamedplus " copy to clipboard "+y
 set encoding=UTF-8
-set relativenumber
 
 " Tabs and spaces
 set expandtab " use <TAB> into spaces
@@ -14,19 +15,21 @@ set shiftwidth=4 " 4 spaces indent
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocompletion
+" autocompletion and langages support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim' " custom line at bottom
-Plug 'morhetz/gruvbox' " theme
-Plug 'jiangmiao/auto-pairs' " auto ()
-Plug 'tpope/vim-fugitive' " git
+Plug 'morhetz/gruvbox' " neovim theme
+Plug 'jiangmiao/auto-pairs' " auto (), {}, [] etc.
+Plug 'tpope/vim-fugitive' " git support
+Plug 'honza/vim-snippets' " vim-snippets, needs fix
 
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim' " typescript support
+Plug 'peitalin/vim-jsx-typescript' " react support
 
 Plug 'preservim/nerdtree' " files tree
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin' " git status in tree
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " colored tree
+Plug 'ryanoasis/vim-devicons' " file type icons
 Plug 'luochen1990/rainbow' " rainbow parentheses
 call plug#end()
 
@@ -34,13 +37,13 @@ call plug#end()
 set background=dark
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
-let g:rainbow_active = 0 "Rainbow Parentheses enabled
+let g:rainbow_active = 0 " toggle rainbow parenthesess
 
 " Shortcuts
-nnoremap <C-n> :tabnew<CR>
+nnoremap <C-n> :tabnew<CR> " open new tab
 map <leader>evc :vsp $MYVIMRC<CR> " open init.vim in vertical tab
-nnoremap <S-Tab> :tabprevious<CR>
-nnoremap <Tab> :tabnext<CR>
+nnoremap <S-Tab> :tabprevious<CR> " go to previous tab
+nnoremap <Tab> :tabnext<CR> " go to next tab
 nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
 
 "NerdTree 
