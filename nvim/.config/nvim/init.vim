@@ -39,6 +39,9 @@ let g:rainbow_active = 0 "Rainbow Parentheses enabled
 " Shortcuts
 nnoremap <C-n> :tabnew<CR>
 map <leader>evc :vsp $MYVIMRC<CR> " open init.vim in vertical tab
+nnoremap <S-Tab> :tabprevious<CR>
+nnoremap <Tab> :tabnext<CR>
+nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
 
 "NerdTree 
 nnoremap <leader>n :NERDTreeFocus<CR>
