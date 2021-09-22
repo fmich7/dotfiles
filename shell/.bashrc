@@ -117,3 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 alias python="python3"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

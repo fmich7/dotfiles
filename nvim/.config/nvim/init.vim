@@ -8,6 +8,7 @@ set noshowmode " disables mode information [-- INSERT --]
 set clipboard+=unnamedplus " copy and paste outside vim
 set cursorline " highlight current line
 set showmatch " highlight matching brackets
+set signcolumn=yes " always show signcolumns
 set splitbelow " better split
 set splitright " ^
 " ===========
@@ -87,8 +88,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " < Shortcuts/binds >
 nnoremap <C-n> :tabnew<CR> " open new tab
 map <leader>vc :tabnew $MYVIMRC<CR> " open init.vim in vertical tab
-" nnoremap <leader><S-Tab> :tabprevious<CR> " go to previous tab
-" nnoremap <leader><Tab> :tabnext<CR> " go to next tab
+nnoremap <silent><Tab> :tabnext<CR> " go to next tab
+nnoremap <silent><S-Tab> :tabprevious<CR> " go to previous tab
 nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
 " save file in insert mode with ctrl + s
 inoremap <c-s> <Esc>:w<CR>a
