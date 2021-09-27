@@ -78,7 +78,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump extract yum vagrant)
+plugins=(
+    git
+    zsh-autosuggestions
+    extract
+    yum
+    vagrant
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,14 +114,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias v="nvim"
-alias vim="nvim"
 
-alias ls="lsd"
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+if [ -x "$(command -v nvim)" ]; then
+    alias v="nvim"
+    alias vim="nvim"
+fi
+
+if [ -x "$(command -v lsd)" ]; then
+    alias ls="lsd"
+    alias l='ls -l'
+    alias la='ls -a'
+    alias lla='ls -la'
+    alias lt='ls --tree'
+fi
+
+if [ -x "$(command -v zoxide)" ]; then
+    alias cd="z"
+fi
+
+if [ -x "$(command -v btop)" ]; then
+    alias htop="btop"
+fi
 
 eval "$(zoxide init zsh)"
 

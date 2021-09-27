@@ -3,6 +3,7 @@ vim_shortcuts.txt
 RL_mapChanger.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
+nvim/.config/nvim/plugged/
 *.py[cod]
 *$py.class
 
