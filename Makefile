@@ -1,4 +1,0 @@
-clean:
-	pwd
-all:
-	ls

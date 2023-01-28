@@ -136,6 +136,10 @@ if [ -x "$(command -v btop)" ]; then
     alias htop="btop"
 fi
 
+if [ -x "$(command -v bat)" ]; then
+    alias cat="bat"
+fi
+
 eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

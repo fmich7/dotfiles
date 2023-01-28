@@ -1,7 +1,7 @@
 #!/bin/sh
 #modern problems require modern solutions
 
-muteDelay=.1
+muteDelay=.3
 
 while true; do
    amixer set Capture nocap; #mute
