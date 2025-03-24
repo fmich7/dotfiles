@@ -1,4 +1,4 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 local map = vim.keymap.set
@@ -9,11 +9,11 @@ map("v", ">", ">gv") -- RESELECT AFTER INDENTING
 map("v", "<", "<gv") -- RESELECT AFTER INDENTING
 -- Highlight text when yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
 -- [[ 🦠 PLUGINS KEYMAPS 🦠 ]]
@@ -48,14 +48,13 @@ map("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", {})
 
 -- CODE RUNNER
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "cpp",
-  callback = function()
-    vim.api.nvim_buf_set_keymap(
-      0,
-      "n",
-      "<F5>",
-      ":w<CR>:!g++ -std=c++17 -Wall -Wextra % -o %:r && ./%:r<CR>",
-      { noremap = true, silent = true }
-    )
-  end,
+	pattern = "cpp",
+	callback = function()
+		vim.keymap.set(
+			"n",
+			"<F5>",
+			":w<CR>:!g++ -std=c++17 -Wall -Wextra % -o %:r && %:r<CR>",
+			{ buffer = true, noremap = true, silent = true }
+		)
+	end,
 })
