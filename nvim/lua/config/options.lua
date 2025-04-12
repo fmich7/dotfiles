@@ -4,3 +4,6 @@
 
 vim.g.snacks_animate = false
 vim.opt.tabstop = 4
+vim.opt.colorcolumn = "79"
+vim.opt.wrap = true
+vim.opt.linebreak = true
