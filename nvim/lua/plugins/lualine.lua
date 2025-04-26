@@ -209,6 +209,7 @@ return {
       color = function()
         return { bg = mode_color[vim.fn.mode()] }
       end,
+      padding = { left = 0, right = 0 },
     })
 
     -- Now don't forget to initialize lualine
