@@ -5,6 +5,7 @@
 local map = vim.keymap
 
 map.set("n", "<C-c>", "<cmd>%y+<CR>", { desc = "general copy whole file" })
-map.del("n", "<leader>fE", {})
 map.set("n", "<C-n>", "<cmd>Neotree filesystem toggle left<CR>", { desc = "open Neotree" })
-map.del("n", "<leader>fe", {})
+
+map.del("n", "<leader>`", {}) -- Switch do other buffer
+map.del("n", "<leader>L", {}) -- Lazy changelog
