@@ -146,20 +146,32 @@ return {
     })
 
     ins_left({
-      -- Lsp server name .
+      -- LSP server names.
       function()
         local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
         local clients = vim.lsp.get_clients()
+        local active_lsp_servers = {}
+
+        -- Check if there are any LSP clients
         if next(clients) == nil then
           return ""
         end
+
+        -- Loop through each client and check if it's active for the current buffer's filetype
         for _, client in ipairs(clients) do
           local filetypes = client.config.filetypes
           if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-            return client.name
+            table.insert(active_lsp_servers, client.name)
           end
         end
-        return ""
+
+        -- If no active LSP servers for the current buffer, return an empty string
+        if #active_lsp_servers == 0 then
+          return ""
+        end
+
+        -- Join the active LSP names into a string
+        return table.concat(active_lsp_servers, ", ")
       end,
       color = { fg = colors.fg, gui = "bold" },
     })

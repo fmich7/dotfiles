@@ -29,6 +29,8 @@ return {
     end,
   },
   { "rose-pine/neovim", name = "rose-pine" },
+  { "projekt0n/github-nvim-theme" },
+  { "rebelot/kanagawa.nvim" },
 
   {
     "LazyVim/LazyVim",
@@ -37,6 +39,7 @@ return {
     },
   },
 
+  --- DASHBOARD
   {
     "snacks.nvim",
     opts = function(_, opts)
